@@ -1,0 +1,200 @@
+1. Which of the following commands can be used to check for file corruption?
+md5sum
+
+2. The advantage of using NFS rather than Samba for file sharing in Linux is
+compatibility with Windows file sharing
+
+3. Every command in Linux is a
+executable program
+
+
+4. How long can a filename in Linux be?
+255 characters
+
+5. Which of the following will kill the process 1010 by an administrator(logged in as a standard user)? The process 1010 was started by the root user.
+su -c "kill 1010"
+
+6. Which of the following allows to secure remote command line access?
+SSH(Secure Shell)
+
+7. Which Linux command will successfully mounts a USB drive?
+mount /dev/sda1 /mnt/usb
+
+8. How much usable space is available, when a Linux system is configured with a RAID 5 array that consists of six 20 GB hard disk drives?
+100
+
+9. Which configuration does cardmgr read at Linux system startup?
+PCMCIA cards
+
+10. Which of the following commands can be run to remove all the rules in an iptables table?
+iptables -F
+
+11. The hierarchy of a series of directories branching in a user system starts from
+/home
+
+12. Which of the following is the BEST way to set up SSH(Secure Shell) for communication between Systems without needing passwords?
+Use ssh-keygen for generating public-private keys.
+
+13. Which command is used to find data files, programs, directories that match the search argument?
+locate
+
+14. The ________ command recursively removes files, which have not been accessed for a period of
+time.
+tmpwatch
+
+15. Which of the following commands can be used to modify kernel parameters at runtime?
+sysctl
+
+===========================================================================================================================
+
+In Linux Kernel, 2.6 realtime priority range is from? wrong
+0 to 99
+
+
+
+Q. 	right
+wtmp and utmp files contain:
+A. 	temporary system data
+B. 	user login-logout log
+C. 	the user’s command execution log
+D. 	the user’s su and sudo attempts
+Answer» b. user login-logout log
+
+
+right
+To increase the response time and throughput, the kernel minimizes the frequency of disk access by keeping a pool of inte data buffer called
+
+    Pooling.
+    Buffer cache.
+    Spooling.
+    Swapping.
+
+Answer is Buffer cache
+
+
+
+wrong
+the system calls in unix is written in which language
+C programming language
+
+
+wrong
+What control character signals the end of the input file ?
+
+    ctrl + s
+    ctrl + z
+    ctrl + w
+    ctrl + d
+
+Answer: Option D
+
+
+The dmesg command
+a) Shows user login logoff attempts
+b) Shows the syslog file for info messages
+c) kernel log messages
+d) Shows the daemon log messages
+
+Answer: C
+
+which option of ls command used to view file inode number
+answer: -i
+
+
+
+Find / -name ‘*’ will
+List all files and directories recursively starting from /
+List a file named * in /
+List all files in / directory
+List all files and directories in / directory
+
+Answer: A
+
+wrong
+Using which command you find resource limits to the session?
+a) rlimit
+b) ulimit
+c) setrlimit
+d) getrlimit
+
+Anser: B
+
+
+wrong
+Which command is used to record a user login session in a file?
+
+    macro
+    read
+    script
+    record
+    sessionrecord
+Anser: Script
+
+
+wrong
+ Which command is used to identify file type?
+a) Type
+b) File
+c) Finfo
+d) Info
+
+Answer: B
+
+
+Which command executes ‘command’ in place of the current process instead of creating a new process?
+a) exec
+b) command
+c) trap
+d) none of the mentioned
+
+Answer: a
+
+
+	
+Any file’s attribute information is stored in which structure on the disk 
+A. 	inode
+B. 	data blocks
+C. 	file blocks
+D. 	directory file
+Answer» a. inode
+
+
+Q. 	wrong
+Binary or executable files are:
+A. 	regular files
+B. 	device files
+C. 	special files
+D. 	directory files
+Answer» a. regular files
+
+
+Q. wrong	
+Which directory contain device special files?
+A. 	/etc
+B. 	/etc/dev
+C. 	/root/bin
+D. 	/dev
+Answer» d. /dev
+
+
+
+Sticky bit can be set using following permission
+0777
+2666
+4744
+1711
+Answer: 1711
+
+wrong
+A user does a chmod operation on a file. Which of the following is true?
+a) The last accessed time of the file is updated
+b) The last modification time of the file is updated
+c) The last change time of the file is updated
+d) None of the above
+
+Answr: C
+
+
+
+
+

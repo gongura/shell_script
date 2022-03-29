@@ -1,0 +1,269 @@
+KickStart
+setuid command
+Pre-requisite of patch management 
+1.
+
+
+
+
+How to check Load Average
+Command 1: Run the command, "cat /proc/loadavg" .
+Command 2 : Run the command, "w" .
+Command 3 : Run the command, "uptime" .
+Command 4: Run the command, "top" . See the first line of top command's output.
+
+we have no free space in VG and we cant plug a new raw disk then how to increase LV size.
+
+password feilds
+shadow file feilds
+what does in background when i create user through useradd command
+if i want to run any service before network. what should we do.
+how to degrade package .
+what is multipathing
+change default user directory when i create user.
+how to check swap partation devices name
+how to check lisiting port.
+how to add route permanent.
+how to check route.
+requirments comes from client to upgrade RAM what you will do.
+
+
+
+How to create yum
+RAID.
+*************************
+HCl Interview Question
+how to disable direct root login
+what are the step to remove LVM
+how to check server is in hang stage when you are not able to login.
+what is loadaverage
+What is UMASK
+how to unlock password in linux
+server health checkup command 
+***********************************
+Birch Street System
+
+how to check history of file in linux
+How to extend LV
+How to recover kernal
+How 
+
+
+file per:- 644
+directory per:- 755
+nfs port number:-2049
+
+# Example of job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+# *  *  *  *  * user-name  command to be executed
+
+sarah:x:1003:1004::/home/sarah:/sbin/nologin
+
+load average interval:- 1,5,15
+
+
+# echo "- - -" >  /sys/class/scsi_host/host0/scan
+The three dash ("-  -  -") of the command act as wildcards meaning rescan everything. Remember that the three values normally stand for channel, SCSI target ID, and LUN.
+
+# echo "c t l" >  /sys/class/scsi_host/hosth/scan
+where
+
+h is the HBA number
+c is the channel on the HBA
+t is the SCSI target ID
+l is the LUN.
+
+
+What is Sticky Bit?
+***********************
+The sticky bit is used to indicate special permissions for files and directories. If a directory with sticky bit enabled will restrict deletion of the file inside it. It can be removed by root, owner of the file or who have to write permission on it.
+
+chmod +t tecadmin.txt
+
+chmod 1777 tecadmin.txt
+
+What is SUID (setuid)?
+**************************
+If SUID bit is set on a file and a user executed it. The process will have the same rights as the owner of the file being executed
+
+Mehtod 1:
+
+# chmod u+s tecadmin.txt
+# ls -l tecadmin.txt
+-rwsr-xr-x 1 root root 0 Mar  8 02:06 tecadmin.txt
+Method 2:
+
+# chmod 4655 tecadmin.txt
+# ls -l tecadmin.txt
+-rwSr-xr-x 1 root root 0 Mar  8 02:06 tecadmin.txt
+
+What is SGID (setgid)?
+*************************
+If SGID bit is set on any directory, all subdirectories and files created inside will get same group ownership as the main directory, it doesn't matter who is creating.
+
+Here is the implementation of SGID on directory on Linux system.
+
+
+# chmod g+s /test/
+# ls -ld /test
+drwxrwsrwx 2 root root 4096 Mar  8 03:12 /test
+Now swich to other user and create a file in /test directory.
+
+# su - tecadmin
+$ cd /test/
+$ touch tecadmin.net.txt
+$ ls -l tecadmin.net.txt
+-rw-rw-r-- 1 tecadmin root 0 Mar  8 03:13 tecadmin.net.txt
+****************************************************************************
+LVEXTEND commands
+
+    pvcreate /dev/sdb1
+    vgs
+        vgextend centos /dev/sdb1
+    vgs
+    df -h
+    vgdisplay
+    df -h
+    lvextend -L +800M /dev/mapper/centos-home
+    xfs_growfs /dev/mapper/centos-home
+    df -h
+    cd /home/
+    ll
+    history
+
+LVREDUCE steps
+
+unmount the file system for reducing.----> umount /mnt
+Check the file system after unmount.--->  e2fsck -ff /dev/amanvg/amanlv
+Reduce the file system.---> resize2fs /dev/amanvg/amanlv 500M
+Reduce the Logical Volume size than Current size.---->  lvreduce -L 500M /dev/amanvg/amanlv
+Recheck the file system for error.--->  e2fsck -ff /dev/amanvg/amanlv
+Remount the file-system back to stage. ----> mount /dev/amanvg/amanlv /mnt
+
+***************************************************************************************************
+
+
+
+https://www.tecmint.com/recover-or-rescue-corrupted-grub-boot-loader-in-centos-7/======> grub reinstallation
+https://www.unixarena.com/2018/05/how-to-recover-grub-on-rhel-7-centos-7.html/==========> ""
+
+Umask
+*********
+it is a system default permissions for newly created files/folders in the machine.
+
+The minimum and maximum UMASK value for a folder is 000 and 777
+
+The minimum and maximum UMASK value for a file is 000 and 666
+
+ACL
+******
+
+Creating and Managing FACL
+
+The setfacl command is used to set ACL on the given file. To give a rw access to user john on the file /tmp/test :
+# setfacl -m u:john:rw /tmp/test
+
+The -m option tells setfacl to modify ACLs on the file(s) mentioned in command line. Instead of user john we can have a group to have a specific permission on the file 
+# setfacl -m g:accounts:rw /tmp/test
+
+FACLs for multiple user and groups can also be set with single command :
+# setfacl -m u:john:rw,g:accounts:rwx /tmp/test
+
+To create a default FACL on a directory :
+# setfacl -m default:u:john:rw /accounts
+
+To remove ACLs, use the setfacl command with -x option :
+# setfacl -x u:john /tmp/test
+
+
+top
+free -m
+ps
+netstat
+df -h
+ls
+
+find the .sh file in system
+*****************************
+method 1:-find /home/user -name "*.sh"
+Method 2:- locate "*.sh"
+
+find file which is owned by user
+
+find / -type f -user aman
+
+Grep command
+****************
+check running process through root
+ps -eaf | grep root
+
+check runnig process which are not running through root
+
+ps -eaf | grep -v root
+
+symbolick link
+*****************
+
+hard link:- ln topprocs.sh tp  ---------> Same inode number
+
+soft link:- ln -s topprocs.sh tp  ------> different Inode number
+
+
+route add command
+******************
+to check route
+route -n
+
+To add a static route to a host address, in other words to a single IP address, issue a command as root:
+
+~]# ip route add 192.0.2.1 via 10.0.0.1 [dev ifname]
+
+o add a static route to a network, in other words to an IP address representing a range of IP addresses, issue the following command as root:
+~]# ip route add 192.0.2.0/24 via 10.0.0.1 [dev ifname]
+
+
+
+How to Clear RAM Memory Cache, Buffer and Swap Space on Linux.
+*****************************************************************
+1. Clear PageCache only
+sync; echo 1 > /proc/sys/vm/drop_caches
+
+2. Clear dentries and inodes
+sync; echo 2 > /proc/sys/vm/drop_caches
+
+3. Clear PageCache, dentries and inodes
+sync; echo 3 > /proc/sys/vm/drop_caches
+
+
+recover grub in linux
+**************************
+change your system the root enviroment
+
+chroot /mnt/sysimage
+
+Next, identify your machine hard drive by issuing the below command in the rescue prompt. 
+
+ls /dev/sd*
+
+/sbin/grub2-install /dev/sda  # Install the boot loader in the boot partition of the first hard disk
+
+reset root pssword in rhel 7
+**************************************
+rd.break
+
+mount -o remount,rw /sysroot
+
+chroot /sysroot
+
+passwd 
+
+touch /.autorelabel
+
+exit
+
+exit

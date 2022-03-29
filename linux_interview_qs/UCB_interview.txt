@@ -1,0 +1,5 @@
+1. extend LVM and reduce LVM
+2. what is Multipathing in linux
+3. what is Network Bonding in Linux
+4. how will you patch all patches excluding one patch using yum (yum update --exclude package)
+5. how will you patch the kernel

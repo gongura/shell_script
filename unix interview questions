@@ -1,0 +1,411 @@
+What are the default permissions of a file when it is created?
+==================================================================================
+Answer: 666 i.e. rw-rw-rw- is the default permission of a file, when it is created.
+
+ What can be used to modify file permissions?
+===========================================================
+Answer: File permissions can be modified using umask.
+
+What are Shell Variables?
+=========================================================
+Answer: Shell variables are the main part of shell programming or scripting. They mainly provide the ability to store and manipulate information within a shell program.
+
+What are the two types of Shell Variables? Explain in brief.
+================================================================
+Answer: The two types of shell variables are:
+
+#1) UNIX Defined Variables or System Variables – These are standard or shell defined variables. Generally, they are defined in CAPITAL letters.
+
+Example: SHELL – This is a Unix Defined or System Variable, which defines the name of the default working shell.
+
+#2) User Defined Variables – These are defined by users. Generally, they are defined in lowercase letters
+
+Example: $ a=10 –Here the user has defined a variable called ‘a’ and assigned value to it as 10.
+
+How are shell variables stored? Explain with a simple example.
+============================================================================
+Answer: Shell variables are stored as string variables.
+
+Example: $ a=10
+
+In the above statement a=10, the 10 stored in ‘a’ is not treated as a number, but as a string of characters 1 and 0.
+
+How to make variables as unchangeable?
+========================================================
+Answer: Variables can be made unchangeable using readonly. For instance, if we want variable ‘a’ value to remain as 10 and not change, then we can achieve this using readonly.
+
+Example:
+$ a=10
+$ readonly a
+
+
+How variables can be wiped out?
+=====================================================================
+Ans: Variables can be wiped out or erased using the unset command.
+
+Example:
+$ a =20
+$ unset a
+
+Upon using the above command the variable ‘a’ and its value 20 get erased from shell’s memory.
+
+CAUTION: Be careful while using this unset command.
+
+
+What are positional parameters? Explain with an example.
+======================================================================
+Answer: Positional parameters are the variables defined by a shell. And they are used whenever we need to convey information to the program. And this can be done by specifying arguments at the command line.
+
+There is a total of 9 positional parameters present i.e. from $1 to $9.
+
+Example: $ Test Indian IT Industry has grown very much faster
+In the above statement, positional parameters are assigned like this.
+$0 -> Test (Name of a shell program/script)
+$1 ->Indian
+$2 -> IT and so on.
+
+ What are the different blocks of a file system? Explain in brief.
+========================================================================================
+Answer: Given below are the main 4 different blocks available on a file system.
+
+File System	 
+Block No.	Name of the Block
+1st Block	Boot Block
+2nd Block	Super Block
+3rd Block	Inode Table
+4th Block	Data Block
+Super Block: This block mainly tells about a state of the file system like how big it is, maximum how many files can be accommodated, etc.
+Boot Block: This represents the beginning of a file system. It contains the bootstrap loader program, which gets executed when we boot the host machine.
+Inode Table: As we know all the entities in a UNIX are treated as files. So, the information related to these files is stored in an Inode table.
+Data Block: This block contains the actual file contents.
+
+
+What are the three editors available in almost all the versions of UNIX?
+===============================================================================
+Answer: The three editors are ed, ex & vi.
+
+What are the three modes of operation of vi editor? Explain in brief.
+========================================================================
+Answer: The three modes of operation of vi editors are,
+
+Command Mode: In this mode, all the keys pressed by a user are interpreted as editor commands.
+Insert Mode: This mode allows for the insertion of a new text and editing of an existing text etc.
+The ex-command Mode: This mode allows a user to enter the commands at a command line.
+
+What is the alternative command available to echo and what does it do?
+=========================================================================
+Answer: tput is an alternative command to echo.
+
+Using this, we can control the way in which the output is displayed on the screen.
+
+How to find out the number of arguments passed to the script?
+=========================================================================
+Answer: The number of arguments passed to the script can be found by the below command.
+
+echo $ #
+
+What are control instructions and how many types of control instructions are available in a shell? Explain in brief.
+=====================================================================================================================
+Answer: Control Instructions are the ones, which enable us to specify the order in which the various instructions in a program/script are to be executed by the computer. Basically, they determine a flow of control in a program.
+
+There are 4 types of control instructions that are available in a shell.
+
+Sequence Control Instruction: This ensures that the instructions are executed in the same order in which they appear in the program.
+Selection or Decision Control Instruction: It allows the computer to take the decision as to which instruction is to be executed next.
+Repetition or Loop Control Instruction: It helps a computer to execute a group of statements repeatedly.
+Case-Control Instruction: This is used when we need to select from several alternatives.
+
+What are Loops and explain three different methods of loops in brief?
+==================================================================================
+Answer: Loops are the ones, which involve repeating some portion of the program/script either a specified number of times or until a particular condition is being satisfied.
+
+3 methods of loops are:
+
+For Loop: This is the most commonly used loop. For loop allows specifying a list of values that the control variable in the loop can take. The loop is then executed for each value mentioned in the list.
+While Loop: This is used in a program when we want to do something for a fixed number of times. While loop gets executed until it returns a zero value.
+Until Loop: This is similar to while loop except that the loop executes until the condition is true. Until the loop gets executed at least once, it returns a non-zero value.
+
+What is IFS?
+========================================
+Answer: IFS stands for Internal Field Separator. And it is one of the system variables. By default, its value is space, tab, and a new line. It signifies that in a line where one field or word ends and another begins.
+
+What is a Break statement and what is it used for?
+=============================================================
+Answer: The break is a keyword and is used whenever we want to jump out of a loop instantly without waiting to get back to the control command.
+
+When the keyword break is encountered inside any loop in the program, control will get passed automatically to the first statement after a loop. A break is generally associated with an if.
+
+What is Continue statement and what is it used for?
+============================================================
+Answer: Continue is a keyword and is used whenever we want to take the control to the beginning of the loop, by passing the statements inside the loop which have not yet been executed.
+
+When the keyword Continue is encountered inside any loop in the program, control automatically passes to the beginning of the loop. Continue is generally associated with an if.
+
+What are Metacharacters in a shell? Explain with some examples.
+======================================================================
+Answer: Metacharacters are special characters in a program or data field which provides information about other characters. They are also called, regular expressions in a shell.
+
+Example:
+
+ls s* – It lists all the files beginning with character ‘s’.
+
+Execution over Shell Interpreter/Editor
+
+Meta Characters Script
+Output:
+
+Meta Characters Output
+$ cat script1 > script2 – Here output of cat command or script1 will go to a script2.
+
+Which command needs to be used to know how long the system has been running?
+==============================================================================
+Answer: uptime command needs to be used to know how long the system has been running.
+
+Example: $ uptime
+
+On entering the above command at shell prompt i.e. $ uptime, the output should look like this.
+
+9:21am  up 86 day(s), 11:46,  3 users,  load average: 2.24, 2.18, 2.16
+
+Execution over Shell Interpreter/Editor
+
+System Runnning Code
+Output:
+
+System Runnning output
+
+How to find the current shell which you are using?
+========================================================
+Answer: We can find the current shell that we are using with echo $SHELL.
+
+Example: $ echo $SHELL
+
+Execution over Shell Interpreter/Editor
+
+Current Shell Script
+Output:
+
+Current Shell output
+
+How to find all the available shells in your system?
+==============================================================
+Answer: We can find all the available shells in our system with $ cat /etc/shells.
+
+Example: $ cat /etc/shells
+
+How many fields are present in a crontab file and what does each field specify?
+=======================================================================================
+Answer: The crontab file has six fields. The first five fields tell cron when to execute the command: minute(0-59), hour(0-23), day(1-31), month(1-12), and day of the week(0-6, Sunday = 0).
+
+And the sixth field contains the command to be executed.
+
+What are the two files of crontab command?
+========================================================
+Answer: Two files of crontab command are:
+
+cron.allow – It decides which users need to be permitted from using crontab command.
+cron.deny – It decides which users need to be prevented from using crontab command.
+
+What command needs to be used to take the backup?
+===================================================================
+Answer: tar is the command which needs to be used to take the backup. It stands for tape archive. The tar command is mainly used to save and restore files to and from an archive medium like tape.
+
+What are the different commands available to check the disk usage?
+==============================================================================
+Answer: There are three different commands available to check the disk usage.
+
+They are:
+
+df – This command is used to check the free disk space.
+du – This command is used to check the directory wise disk usage.
+dfspace – This command is used to check the free disk space in terms of MB.
+
+What are the different communication commands available in Unix/Shell?
+================================================================================
+Answer: Basically, there are 4 different communication commands available in Unix/Shell. And they are mail, news, wall & motd.
+
+How to find out the total disk space used by a specific user, say for example username is John?
+======================================================================================================
+Answer: The total disk space used by John can be found out as:
+
+du –s/home/John
+
+What is Shebang in a shell script?
+==================================================
+Answer: Shebang is a # sign followed by an exclamation i.e. !. Generally, this can be seen at the beginning or top of the script/program. Usually, a developer uses this to avoid repetitive work. Shebang mainly determines the location of the engine which is to be used in order to execute the script.
+
+Here ‘#’ symbol is called hash and ‘!’ is called a bang.
+
+Example: #!/bin/bash
+
+The above line also tells which shell to use.
+
+What is the command to be used to display the shell’s environment variables?
+=========================================================================================
+Answer: Command to be used to display the shell’s environment variables is env or printenv.
+
+How to debug the problems encountered in shell script/program?
+==================================================================================
+Answer: Though it depends on the type of problem encountered. Given below are some common methods used to debug the problems in the script.
+
+Debug statements can be inserted in the shell script to output/display the information which helps to identify the problem.
+Using “set -x” we can enable debugging in the script.
+
+How to know the variable length?
+==================================================
+Answer: Variable length can be checked by $ {#variable}
+
+What is the difference between = and ==?
+=======================================================
+Answer:
+
+= -> This is used for assigning value to the variable.
+== -> This is used for string comparison.
+
+How to open a read-only file in Unix/shell?
+===================================================
+Answer: Read-only file can be opened by:
+vi –R <File Name>
+
+How can the contents of a file inside jar be read without extracting in a shell script?
+===========================================================================================
+Answer: The contents of the file inside a jar can be read without extracting in a shell script as shown below.
+tar –tvf <File Name>.tar
+
+What is the difference between diff and cmp commands?
+============================================================
+Answer: diff – Basically, it tells about the changes which need to be made to make files identical.
+
+cmp – Basically it compares two files byte by byte and displays the very first mismatch.
+
+Explain in brief about sed command with an example.
+=============================================================
+Answer: sed stands for stream editor. And it is used for editing a file without using an editor. It is used to edit a given stream i.e. a file or input from a pipeline.
+
+Syntax: sed options file
+
+Example:
+
+Execution over Shell Interpreter/Editor
+
+Sed command
+echo "Hello world" | sed 's/Hello/world'
+Here ‘s’ command present in sed will replace string Hello with Hi.
+
+Output:
+
+Sed command Output
+
+ What is the use of the "$?" command?
+ =====================================================
+By using the command "$?", you can find out the status of the last command executed.
+===============================================================================================================
+new site
+================================================================================================================
+What do you mean by crontab?
+========================================================
+Crontab stands for "cron table," meaning that it makes use of the cron scheduler to perform tasks. In other words, it is the list of commands that you wish to run on a regular schedule and the command that will let you manage it. It is possible to view or edit the table of commands using the crontab command. In addition to the schedule, the term "Crontab" also refers to the name of the program used to edit the schedule.
+
+What are interactive and non-interactive shells?
+==========================================================
+Interactive shell: /bin/bash and /bin/sh is interactive shell. It is a non-login shell that gets started from a command line. It first copies the parent environment and then invokes.
+
+Non-Interactive shell: /sbin/nologin shell is non-interactive shell. It is present when the shell script is running and just inherits the parent's environment.
+
+What is the best way to debug the shell script/program problems?
+============================================================================
+Following are some common methods of debugging a script:
+
+The shell script can be modified to include debug statements to display the information that can be useful in identifying the problem.   
+By setting -x in the script, we can enable debugging.
+
+What do you mean by metacharacters?
+================================================================================
+In a data field or program, metacharacters are special characters that provide information about other characters. In shells, they're called regular expressions.  A character that is neither a letter nor a number is generally considered a metacharacter. Using shell metacharacters, you can group together commands, redirect and pipe input/output, put commands in the background, reduce the size of file names and path names, etc. You can use them as wildcards to specify a file name without typing in the file's full name. The most common metacharacters are as follows:
+
+Asterisk (*): Use the * to match any character.
+Question Mark (?): It matches a single character in the filename.
+Brackets ([…]):  The metacharacters used here match some specified characters.
+Hyphen (-): When placed within [] (brackets), the - metacharacter matches a specified range.
+
+Write the difference between $$ and $!?
+==============================================================
+You can use $$ to get the process id of the current process. However, $! displays the process id for a background process that recently went away.
+
+Write difference between grep and find command.
+==================================================================
+Grep command: This command facilitates searching and displaying content based on regular expressions specified by the user. Using the Grep command, one can search in a file for patterns. Grep command have the following syntax:
+grep “literal string” <filename>
+Example: 
+
+grep “apple” file1.txt                     //Displays all the lines with the word “apple” in the file1
+
+grep “apple” file1.txt  file2.txt   //Scan multiple documents and search the word “apple” in both files.
+Find command: The FIND command searches for files and folders based on their size, modification time, and access time. You can use this command to search files and directories. Find command have the following syntax:
+find <path> <search criteria> <action>
+Example:
+
+find –type  f                      // Command will find all the files
+
+find  –type  d                    //Command will find all the directories
+
+find .  –name file1.txt       //Command will find file1.txt in the current directory.
+
+
+How can we create a function in shell script?
+=========================================================================
+In other programming languages, shell functions are much like subroutines, procedures, and functions. The syntax for declaring a function is as follows:
+
+function_name () 
+{ 
+   list of commands
+} 
+Function_name is the name of your function, and that's what you'll use to call it from anywhere in your script. The function name must be followed by parentheses, then a list of commands enclosed in braces.
+
+Example:
+
+The following example shows how function can be used:
+
+#!/bin/sh
+# Define your function here
+ 
+Hello () 
+  {
+     echo "Hello World"
+  }
+ 
+# Invoke your function
+Hello
+The following output will be displayed after execution:
+
+$./test.sh
+Hello World
+
+How to use pipe commands?
+========================================
+Pipe command allows you to use several commands in the same way, in which the output of one is used as input for another. Like a pipeline, each process output is directly input to the next one. A pipe is represented by the symbol "|". The flow of data through a pipeline is unidirectional, i.e., from left to right.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

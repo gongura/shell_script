@@ -1,0 +1,47 @@
+1.Auto alerts
+2.User request(P1 to P4)
+3.Incidents
+
+Server hungs:
+
+Satellite patching:
+1 server not getting up
+2 df -Ht mount points
+3 how will you restore the server
+4 account locked, password expiry, userid exists or not
+
+=====================
+when we do patching, we should take backup
+
+RHE6:
+Netwrok connection failed or timeout":
+-go to single used mode
+- add - init=/bin/ba
+sh
+- press b to resume booting 
+- then you will go to shell prompt where you can perform commands
+- do "mount -o remount rw /" to get read write permissions on root file system
+- for this kindof issues, error usally present in /etc/passwd file 
+- you should have already take the passwd file backup
+- move the contents of backup passwd file to /etc/passwd
+- now exec /sbin/init to resume booting
+
+Control D prompt issue:
+- if you see this then there is something issue in file systems
+- give root password to enter into command line again
+- unmount the root file system
+- now do e2fsck {root file system}
+- now do exec /sbin/init to resume booting
+================================================================
+if df command is not working use strace df command to find the exact issue
+
+
+
+
+
+
+
+
+
+
+
