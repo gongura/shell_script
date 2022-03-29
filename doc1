@@ -1,0 +1,80 @@
+to see the os ---> uname or uname -a
+=========================================
+present working directory ---> pwd
+=========================================
+how to know the shell ---> which $SHELL
+========================================================
+To see all the shells in system ---> cat /ectc/shells
+========================================================
+ $* -> it represents whole input as single string
+ example:- how are you ==> "howareyou"
+ IFS="-"
+ =========================================================
+ $@--> it consider each input as seperate string
+ example:- how are you => "how" "are" "you"
+ =========================================================
+ echo always adds the \n
+ example:- echo "apple" would be apple\n
+ ========================================================
+ echo "apple" | wc -c gives 6 due to \n
+ here c is characters -l is for lines
+ ========================================================
+ to remove \n we have to add -n with echo cammand
+ =======================================================
+ $() variable substitution
+ len=$(echo -n "apple" | wc -c)
+ echo "the lenth of string is :$len"
+=========================================================
+len=$(echo -n "$1" | wc -c)
+ echo "the lenth of string is $1:$len"
+=========================================================
+variable substitution and command substitution
+for variables $x or ${x} 
+for commands `comd` 
+=========================================================
+date +%d_%m_%Y_%H_%M_%S
+
+timestamp = $(date +%d_%m_%Y_%H_%M_%S)
+echo "this is extra data to log file" >> ${timestamp}.log
+date >> ${timestamp}.log
+echo >> ${timestamp}.log ==> empty line added to log file
+==========================================================
+mkdir d1 d2 d3 => to create multiple directories
+mkdir -p dir1/dir2/dir3
+-p means path of directories
+tree dir1
+===========================================================
+mkdir -p h/{a,b,c} inside h three folders will create
+===========================================================
+heroines/{s,k,c,p,k}/{jan,feb,mar,april,may,jun,july,august,sept,nov,dec}_{2020,2021,2022}
+heroines/{s,k,c,p,k}/{jan,feb,mar,april,may,jun,july,august,sept,nov,dec}_202{1,2,3}/schedule_{1..31}.txt
+
+touch file_{1..20}.txt ===========> to create num of files 
+=============================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
